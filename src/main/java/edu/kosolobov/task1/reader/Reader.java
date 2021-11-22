@@ -1,4 +1,7 @@
-package reader;
+package edu.kosolobov.task1.reader;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -7,15 +10,17 @@ import java.nio.file.Paths;
 import java.util.stream.Stream;
 
 public class Reader {
+    private static final Logger log = LogManager.getLogger();
     private String filePath;
     Stream<String> stream;
 
     public Reader() {
-
+        log.info("Empty Reader created.");
     }
 
     public Reader(String filePath) {
         this.filePath = filePath;
+        log.info("Reader created.");
     }
 
     public void openFile() throws IOException {
@@ -27,9 +32,7 @@ public class Reader {
         openFile();
     }
 
-    public Double read() throws IOException {
-        StringBuilder number = new StringBuilder();
-
-        int ch;
+    public Double readCubeLine() {
+        return null;
     }
 }
