@@ -1,7 +1,8 @@
 package edu.kosolobov.entity.impl;
 
 import edu.kosolobov.entity.Figure;
-import edu.kosolobov.entity.Point;
+import edu.kosolobov.entity.Point3D;
+import edu.kosolobov.entity.property.CubeProperty;
 import edu.kosolobov.util.UtilGenerator;
 
 import java.util.ArrayList;
@@ -9,49 +10,57 @@ import java.util.List;
 import java.util.Objects;
 
 public class Cube implements Figure {
-    private final long cubeId;
-    private final List<Point> points;
+    private final long figureId;
+    private final CubeProperty property;
 
-    public Cube(List<Point> points) {
-        cubeId = UtilGenerator.GenerateFigureId();
-        this.points = points;
-
+    public Cube(CubeProperty property) {
+        figureId = UtilGenerator.GenerateFigureId();
+        this.property = property;
     }
 
-    public Cube(Double length) {
-        cubeId = UtilGenerator.GenerateFigureId();
-        
-        length/=2.0;
+    public List<Point3D> getPoints() {
+        List<Point3D> point3DS = new ArrayList<>();
+        Point3D.PointBuilder pb = new Point3D.PointBuilder();
 
-        List<Point> newPoints = new ArrayList<>(List.of());
+        pb.setZeroPoint(property.getZeroPoint());
+        pb.setDelta(property.getSideLength());
 
-        newPoints.add(new Point(-length, -length, -length));
-        newPoints.add(new Point(length, -length, -length));
-        newPoints.add(new Point(-length, length, -length));
-        newPoints.add(new Point(length, length, -length));
-        newPoints.add(new Point(-length, -length, length));
-        newPoints.add(new Point(length, -length, length));
-        newPoints.add(new Point(-length, length, length));
-        newPoints.add(new Point(length, length, length));
+        point3DS.add(pb.build());
+        point3DS.add(pb.moveX().build());
+        point3DS.add(pb.moveY().build());
+        point3DS.add(pb.moveZ().build());
+        point3DS.add(pb.moveX().moveY().build());
+        point3DS.add(pb.moveX().moveZ().build());
+        point3DS.add(pb.moveY().moveZ().build());
+        point3DS.add(pb.moveX().moveY().moveZ().build());
 
-        points = List.copyOf(newPoints);
+        return List.copyOf(point3DS);
     }
 
     @Override
     public long getId() {
-        return cubeId;
+        return figureId;
     }
 
     public String getName() {
         return "cube";
     }
 
-    public List<Point> getPoints() {
-        return points;
+    public CubeProperty getProperty() {
+        return property;
     }
 
+    @Override
+    public String info() {
+        return String.format("cube{figureId:%d, sideLength:%.4f, zeroPoint:%s",
+                figureId,
+                property.getSideLength(),
+                property.getZeroPoint());
+    }
+
+    @Override
     public Cube copy() {
-        return new Cube(this.getPoints());
+        return new Cube(new CubeProperty(property.getZeroPoint().copy(), property.getSideLength()));
     }
 
     @Override
@@ -59,16 +68,16 @@ public class Cube implements Figure {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cube cube = (Cube) o;
-        return points.equals(cube.points);
+        return figureId == cube.figureId && Objects.equals(property, cube.property);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cubeId, points);
+        return Long.hashCode(figureId);
     }
 
     @Override
     public String toString() {
-        return String.format("%s{%s}", info(), points);
+        return String.format("%s{%s}", info(), getPoints());
     }
 }

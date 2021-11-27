@@ -1,29 +1,25 @@
 package edu.kosolobov.entity;
 
 import edu.kosolobov.entity.impl.Cube;
+import edu.kosolobov.entity.property.CubeProperty;
+import edu.kosolobov.exception.CubeException;
+import edu.kosolobov.reader.LineReader;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CubeTest {
-    @Test
-    void checkInfo(){
-        Cube c1 = new Cube(25.15);
-        Cube c2 = new Cube(253.153);
-        System.out.println(c1.info());
-        System.out.println(c2.info());
-    }
+import java.util.ArrayList;
+
+class CubeTest extends Assertions {
 
     @Test
-    void checkToString(){
-        Cube c = new Cube(51.12);
-        System.out.println(c);
-    }
-
-    @Test
-    void checkEquals(){
-        Cube c1 = new Cube(10.0);
-        Cube c2 = new Cube(10.0);
-        assert c1.equals(c2);
-        assert c1.equals(c1.copy());
-        assert c1.equals(c2.copy());
+    void checkEqualsToStringHashCode(){
+        CubeProperty p = new CubeProperty(new Point3D(0.0,0.0,0.0), 12354.1231541);
+        Cube c1 = new Cube(p);
+        Cube c2 = new Cube(p);
+        assertNotNull(c1);
+        assertNotEquals(c1, c1.copy());
+        assertNotEquals(c1, c2);
+        assertNotEquals(c1.hashCode(), c2.hashCode());
+        assertEquals(c1.getProperty(), c2.getProperty());
     }
 }

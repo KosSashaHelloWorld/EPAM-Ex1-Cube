@@ -1,15 +1,16 @@
 package edu.kosolobov.factory;
 
 import edu.kosolobov.entity.impl.Cube;
-import edu.kosolobov.factory.impl.CubeFactory;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CubeFactoryTest {
+class CubeFactoryTest extends Assertions {
+
     @Test
-    void checkGetCube() {
-        CubeFactory cb = new CubeFactory();
-        Cube c1 = cb.getCube(10.0);
-        Cube c2 = cb.getCube(c1.getPoints());
-        assert c1.equals(c2);
+    void checkGetCube(){
+        CubeFactory factory = new CubeFactory();
+        Cube cube = factory.getCube(100.00123);
+        assertNotNull(cube);
+        assertNotNull(factory.getCube(cube.getProperty()));
     }
 }
