@@ -5,15 +5,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CubeFileValidatorTest {
 
     @Test
     void fileValidation() {
-        CubeFileValidator val = new CubeFileValidator();
-        assertTrue(val.fileIsValid("src/main/resources/example.txt"));
-        assertFalse(val.fileIsValid("unknownfile.txt"));
+        CubeFileValidator validator = new CubeFileValidator();
+        List<String> lines = validator.getValidLines("src/test/resources/example.txt");
+        assertFalse(lines.isEmpty());
     }
 
 }

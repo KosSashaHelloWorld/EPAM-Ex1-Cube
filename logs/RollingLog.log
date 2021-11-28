@@ -1,14 +1,40 @@
-28 Nov 2021 01:17 [main] INFO LineReader.readFile - File src/main/resources/example.txt opened.
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [40.0,100.0,100.0,100.0] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [40.0,100,100,100] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [40] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [40,100.0,100.0,100.0] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [40,100,100,100] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [0] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [0,100.0,100.0,100.0] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [0,100,100,100] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [-40.0] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [-40.0,100.0,100.0,100.0] is valid for cube
-28 Nov 2021 01:17 [main] INFO CubeLineValidator.lineIsValid - line [-40.0,100,100,100] is valid for cube
-28 Nov 2021 01:17 [main] INFO LineReader.hasNext - File ended. 12 lines summary
-28 Nov 2021 01:17 [main] WARN CubeFileValidator.fileIsValid - File is invalid: java.nio.file.NoSuchFileException: unknownfile.txt
+28 Nov 2021 05:05 [main] INFO LineReader.readFile - File src/test/resources/example.txt opened.
+28 Nov 2021 05:05 [main] INFO LineReader.hasNext - File ended. 15 lines summary
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 15.2314, Y: -15.1000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 15.2314, Y: -15.1000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 115.2315, Y: -15.1000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:0, sideLength:100.0012, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:1, sideLength:100.0012, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO LineReader.readFile - File src/test/resources/example.txt opened.
+28 Nov 2021 05:05 [main] INFO LineReader.hasNext - File ended. 15 lines summary
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:2, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:3, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:4, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:5, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:6, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:7, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0
+28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0,100.0,100.0,100.0
+28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0,100,100,100
+28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0
+28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0,100.0,100.0,100.0
+28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0,100,100,100
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:8, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:9, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:10, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 05:05 [main] INFO CubeFileParser.getCubesFromFile - List<Cube> was created. Totally 9 cubes
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:11, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:12, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:13, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created

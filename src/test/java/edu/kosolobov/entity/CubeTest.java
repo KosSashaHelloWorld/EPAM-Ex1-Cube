@@ -13,7 +13,12 @@ class CubeTest extends Assertions {
 
     @Test
     void checkEqualsToStringHashCode(){
-        CubeProperty p = new CubeProperty(new Point3D(0.0,0.0,0.0), 12354.1231541);
+        CubeProperty p = null;
+        try {
+            p = new CubeProperty(12354.1231541, new Point3D(0.0,0.0,0.0));
+        } catch (CubeException e) {
+            e.printStackTrace();
+        }
         Cube c1 = new Cube(p);
         Cube c2 = new Cube(p);
         assertNotNull(c1);

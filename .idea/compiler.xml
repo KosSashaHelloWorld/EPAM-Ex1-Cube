@@ -7,7 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="EPAM-Ex1-Cube" />
+        <module name="Shapes" />
       </profile>
     </annotationProcessing>
   </component>

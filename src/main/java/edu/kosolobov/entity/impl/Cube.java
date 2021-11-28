@@ -3,19 +3,25 @@ package edu.kosolobov.entity.impl;
 import edu.kosolobov.entity.Figure;
 import edu.kosolobov.entity.Point3D;
 import edu.kosolobov.entity.property.CubeProperty;
+import edu.kosolobov.exception.CubeException;
 import edu.kosolobov.util.UtilGenerator;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Cube implements Figure {
+    private static final Logger log = LogManager.getLogger(Cube.class);
     private final long figureId;
     private final CubeProperty property;
 
     public Cube(CubeProperty property) {
         figureId = UtilGenerator.GenerateFigureId();
         this.property = property;
+        log.log(Level.INFO, "{} was created", this);
     }
 
     public List<Point3D> getPoints() {
@@ -52,7 +58,7 @@ public class Cube implements Figure {
 
     @Override
     public String info() {
-        return String.format("cube{figureId:%d, sideLength:%.4f, zeroPoint:%s",
+        return String.format("Cube{figureId:%d, sideLength:%.4f, zeroPoint:%s",
                 figureId,
                 property.getSideLength(),
                 property.getZeroPoint());
@@ -60,7 +66,13 @@ public class Cube implements Figure {
 
     @Override
     public Cube copy() {
-        return new Cube(new CubeProperty(property.getZeroPoint().copy(), property.getSideLength()));
+        Cube cube = null;
+        try {
+            cube = new Cube(new CubeProperty(property.getSideLength(), property.getZeroPoint().copy()));
+        } catch (CubeException e) {
+            log.log(Level.ERROR, "Copying cube failed");
+        }
+        return cube;
     }
 
     @Override
@@ -78,6 +90,6 @@ public class Cube implements Figure {
 
     @Override
     public String toString() {
-        return String.format("%s{%s}", info(), getPoints());
+        return info();
     }
 }

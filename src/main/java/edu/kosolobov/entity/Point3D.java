@@ -1,5 +1,6 @@
 package edu.kosolobov.entity;
 
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Objects;
@@ -14,7 +15,7 @@ public class Point3D {
         this.x = x;
         this.y = y;
         this.z = z;
-        log.info("Point was created");
+        log.log(Level.INFO, "{} was created", this);
     }
 
     public Double getX() {
@@ -48,7 +49,7 @@ public class Point3D {
 
     @Override
     public String toString() {
-        return String.format("%nPoint{X: %.4f, Y: %.4f, Z: %.4f}", x, y, z);
+        return String.format("Point{X: %.4f, Y: %.4f, Z: %.4f}", x, y, z);
     }
 
     public static class PointBuilder {

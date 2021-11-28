@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public class LineReader {
     private static final Logger log = LogManager.getLogger();
     private List<String> lines;
-    int count = 0;
+    int count = -1;
 
 
     public LineReader() {
