@@ -1,8 +1,8 @@
 package edu.kosolobov.factory;
 
 import edu.kosolobov.entity.Point3D;
-import edu.kosolobov.entity.impl.Cube;
-import edu.kosolobov.entity.property.CubeProperty;
+import edu.kosolobov.entity.figureImpl.Cube;
+import edu.kosolobov.entity.propertyImpl.CubeProperty;
 import edu.kosolobov.exception.CubeException;
 import edu.kosolobov.parser.CubeFileParser;
 

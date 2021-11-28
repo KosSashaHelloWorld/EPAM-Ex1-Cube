@@ -2,12 +2,12 @@ package edu.kosolobov.entity;
 
 public interface Figure {
 
+    FigureProperty getProperty();
+
     long getId();
 
-    String getName();
-
     default String info() {
-        return String.format("[name: %s, id: %d]", getName(), getId());
+        return String.format("class: %s, id: %s}", this.getClass(), getId());
     }
 
     Figure copy();

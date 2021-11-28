@@ -1,13 +1,10 @@
 package edu.kosolobov.entity;
 
-import edu.kosolobov.entity.impl.Cube;
-import edu.kosolobov.entity.property.CubeProperty;
+import edu.kosolobov.entity.figureImpl.Cube;
+import edu.kosolobov.entity.propertyImpl.CubeProperty;
 import edu.kosolobov.exception.CubeException;
-import edu.kosolobov.reader.LineReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 class CubeTest extends Assertions {
 

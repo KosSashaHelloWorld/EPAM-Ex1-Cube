@@ -1,9 +1,8 @@
 package edu.kosolobov.factory;
 
-import edu.kosolobov.entity.impl.Cube;
+import edu.kosolobov.entity.figureImpl.Cube;
 import edu.kosolobov.exception.CubeException;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

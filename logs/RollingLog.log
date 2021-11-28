@@ -1,40 +1,52 @@
-28 Nov 2021 05:05 [main] INFO LineReader.readFile - File src/test/resources/example.txt opened.
-28 Nov 2021 05:05 [main] INFO LineReader.hasNext - File ended. 15 lines summary
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 15.2314, Y: -15.1000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 15.2314, Y: -15.1000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 115.2315, Y: -15.1000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:0, sideLength:100.0012, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:1, sideLength:100.0012, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO LineReader.readFile - File src/test/resources/example.txt opened.
-28 Nov 2021 05:05 [main] INFO LineReader.hasNext - File ended. 15 lines summary
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:2, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:3, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:4, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:5, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:6, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:7, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0
-28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0,100.0,100.0,100.0
-28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0,100,100,100
-28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0
-28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0,100.0,100.0,100.0
-28 Nov 2021 05:05 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0,100,100,100
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:8, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:9, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:10, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
-28 Nov 2021 05:05 [main] INFO CubeFileParser.getCubesFromFile - List<Cube> was created. Totally 9 cubes
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:11, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:12, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
-28 Nov 2021 05:05 [main] INFO Cube.<init> - Cube{figureId:13, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:59, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:60, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO CubeFileParser.getCubesFromFile - List<Cube> was created. Totally 9 cubes
+28 Nov 2021 18:15 [main] INFO LineReader.readFile - File src/test/resources/CubeLabTestCubes.txt opened.
+28 Nov 2021 18:15 [main] INFO LineReader.hasNext - File ended. 1 lines summary
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: -50.0000, Y: -50.0000, Z: -50.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:61, sideLength:100.0000, zeroPoint:Point{X: -50.0000, Y: -50.0000, Z: -50.0000} was created
+28 Nov 2021 18:15 [main] INFO CubeFileParser.getCubesFromFile - List<Cube> was created. Totally 1 cubes
+28 Nov 2021 18:15 [main] INFO CubeLaboratory.dividedVolumesRelation - Cube{figureId:61, sideLength:100.0000, zeroPoint:Point{X: -50.0000, Y: -50.0000, Z: -50.0000} divides by coordinate planes YZ
+28 Nov 2021 18:15 [main] INFO CubeLaboratory.dividedVolumesRelation - Cube{figureId:61, sideLength:100.0000, zeroPoint:Point{X: -50.0000, Y: -50.0000, Z: -50.0000} divides by coordinate planes XZ
+28 Nov 2021 18:15 [main] INFO CubeLaboratory.dividedVolumesRelation - Cube{figureId:61, sideLength:100.0000, zeroPoint:Point{X: -50.0000, Y: -50.0000, Z: -50.0000} divides by coordinate planes XY
+28 Nov 2021 18:15 [main] INFO LineReader.readFile - File src/test/resources/example.txt opened.
+28 Nov 2021 18:15 [main] INFO LineReader.hasNext - File ended. 15 lines summary
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 15.2314, Y: -15.1000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 15.2314, Y: -15.1000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 115.2315, Y: -15.1000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:62, sideLength:100.0012, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:63, sideLength:100.0012, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO LineReader.readFile - File src/test/resources/example.txt opened.
+28 Nov 2021 18:15 [main] INFO LineReader.hasNext - File ended. 15 lines summary
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:64, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:65, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:66, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:67, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:68, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:69, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0
+28 Nov 2021 18:15 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0,100.0,100.0,100.0
+28 Nov 2021 18:15 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0,100,100,100
+28 Nov 2021 18:15 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0
+28 Nov 2021 18:15 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0,100.0,100.0,100.0
+28 Nov 2021 18:15 [main] WARN CubeFileParser.getCubesFromFile - Side length of cube can`t be zero! : 0.0,100,100,100
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:70, sideLength:40.0000, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:71, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:72, sideLength:40.0000, zeroPoint:Point{X: 100.0000, Y: 100.0000, Z: 100.0000} was created
+28 Nov 2021 18:15 [main] INFO CubeFileParser.getCubesFromFile - List<Cube> was created. Totally 9 cubes
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:73, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:74, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Point3D.<init> - Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created
+28 Nov 2021 18:15 [main] INFO Cube.<init> - Cube{figureId:75, sideLength:12354.1232, zeroPoint:Point{X: 0.0000, Y: 0.0000, Z: 0.0000} was created

@@ -1,12 +1,16 @@
-package edu.kosolobov.entity.property;
+package edu.kosolobov.entity.propertyImpl;
 
+import edu.kosolobov.entity.FigureProperty;
 import edu.kosolobov.entity.Point3D;
 import edu.kosolobov.exception.CubeException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class CubeProperty {
+import java.util.HashMap;
+import java.util.Map;
+
+public class CubeProperty implements FigureProperty {
     private static final Logger log = LogManager.getLogger(CubeProperty.class);
     private final Point3D zeroPoint3D;
     private final Double sideLength;
@@ -23,8 +27,21 @@ public class CubeProperty {
         }
     }
 
+    @Override
     public Point3D getZeroPoint() {
         return zeroPoint3D;
+    }
+
+    @Override
+    public Map<String, Double> getParameters() {
+        Map<String, Double> parameters = new HashMap<>();
+
+        parameters.put("length", sideLength);
+        parameters.put("PointX", zeroPoint3D.getX());
+        parameters.put("PointY", zeroPoint3D.getY());
+        parameters.put("PointZ", zeroPoint3D.getZ());
+
+        return parameters;
     }
 
     public Double getSideLength() {
