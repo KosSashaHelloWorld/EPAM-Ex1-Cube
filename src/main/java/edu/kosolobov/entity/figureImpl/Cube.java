@@ -1,8 +1,8 @@
-package edu.kosolobov.entity.impl;
+package edu.kosolobov.entity.figureImpl;
 
 import edu.kosolobov.entity.Figure;
 import edu.kosolobov.entity.Point3D;
-import edu.kosolobov.entity.property.CubeProperty;
+import edu.kosolobov.entity.propertyImpl.CubeProperty;
 import edu.kosolobov.exception.CubeException;
 import edu.kosolobov.util.UtilGenerator;
 import org.apache.logging.log4j.Level;
@@ -46,10 +46,6 @@ public class Cube implements Figure {
     @Override
     public long getId() {
         return figureId;
-    }
-
-    public String getName() {
-        return "cube";
     }
 
     public CubeProperty getProperty() {
