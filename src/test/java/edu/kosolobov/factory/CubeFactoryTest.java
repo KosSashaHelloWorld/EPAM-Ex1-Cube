@@ -5,6 +5,8 @@ import edu.kosolobov.exception.CubeException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.net.URL;
 import java.util.List;
 
 class CubeFactoryTest extends Assertions {
@@ -24,9 +26,15 @@ class CubeFactoryTest extends Assertions {
 
     @Test
     void checkGetCubeFromFile() {
+        URL fileUrl = CubeFactoryTest.class
+                .getClassLoader()
+                .getResource("files/example.txt");
+        assertNotNull(fileUrl);
+        File file = new File(fileUrl.getFile());
+        String filePath = file.getAbsolutePath();
         List<Cube> cubes = null;
         try {
-            cubes = factory.getCubes("src/test/resources/example.txt");
+            cubes = factory.getCubes(filePath);
         } catch (CubeException e) {
             e.printStackTrace();
         }

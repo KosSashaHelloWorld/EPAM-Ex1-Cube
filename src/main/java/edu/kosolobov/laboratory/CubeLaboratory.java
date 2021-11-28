@@ -1,4 +1,4 @@
-package edu.kosolobov.labaratory;
+package edu.kosolobov.laboratory;
 
 import edu.kosolobov.entity.Figure;
 import edu.kosolobov.entity.Point3D;
