@@ -95,12 +95,12 @@ public class FigureRepository {
         return repo.remove(index);
     }
 
-    public int indexOf(Object o) {
-        return repo.indexOf(o);
+    public int indexOf(Figure figure) {
+        return repo.indexOf(figure);
     }
 
-    public int lastIndexOf(Object o) {
-        return repo.lastIndexOf(o);
+    public int lastIndexOf(Figure figure) {
+        return repo.lastIndexOf(figure);
     }
 
     public ListIterator<Figure> listIterator() {
