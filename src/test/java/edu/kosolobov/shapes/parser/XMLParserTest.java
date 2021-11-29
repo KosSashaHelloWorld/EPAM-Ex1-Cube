@@ -1,5 +1,6 @@
 package edu.kosolobov.shapes.parser;
 
+import edu.kosolobov.shapes.reader.XMLReader;
 import org.junit.jupiter.api.Test;
 import org.xml.sax.SAXException;
 
@@ -14,29 +15,25 @@ class XMLParserTest {
 
     @Test
     void parseXMLbyDOM() throws ParserConfigurationException, IOException, SAXException {
-        URL fileUrl = XMLParserTest.class
-                .getClassLoader()
-                .getResource("files/testxml.tld");
-        File file = new File(fileUrl.getFile());
+        XMLReader reader = new XMLReader();
+        File file = reader.readFile("files/testxml.tld");
 
         XMLParser parser = new XMLParser();
 
         var list = parser.parseXMLbyDOM(file);
 
-        System.out.println(list);
+        assertFalse(list.isEmpty());
     }
 
     @Test
     void parseXMLbySAX() throws ParserConfigurationException, IOException, SAXException {
-        URL fileUrl = XMLParserTest.class
-                .getClassLoader()
-                .getResource("files/testxml.tld");
-        File file = new File(fileUrl.getFile());
+        XMLReader reader = new XMLReader();
+        File file = reader.readFile("files/testxml.tld");
 
         XMLParser parser = new XMLParser();
 
         var list = parser.parseXMLbySAX(file);
 
-        System.out.println(list);
+        assertFalse(list.isEmpty());
     }
 }
