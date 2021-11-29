@@ -12,42 +12,17 @@ import java.util.Map;
 
 public class CubeLaboratory {
     private static final Logger log = LogManager.getLogger(CubeLaboratory.class);
-    private Cube cube;
 
     public CubeLaboratory() {
         super();
-    }
-
-    public CubeLaboratory(Cube cube) {
-        this.cube = cube;
-    }
-
-    public void setCube(Cube cube) {
-        this.cube = cube;
-    }
-
-    public Cube getCube() {
-        return cube;
-    }
-
-    public Double calcArea() {
-        return calcArea(cube);
     }
 
     public Double calcArea(Cube cube) {
         return (cube.getProperty().getSideLength() * cube.getProperty().getSideLength()) * 6;
     }
 
-    public Double calcVolume() {
-        return calcVolume(cube);
-    }
-
     public Double calcVolume(Cube cube) {
         return cube.getProperty().getSideLength() * cube.getProperty().getSideLength() * cube.getProperty().getSideLength();
-    }
-
-    public boolean isOnCoordinatePlane() {
-        return isOnCoordinatePlane(cube);
     }
 
     public boolean isOnCoordinatePlane(Cube cube) {
@@ -66,10 +41,6 @@ public class CubeLaboratory {
             log.log(Level.INFO, "{} is not a Cube", figure);
             return false;
         }
-    }
-
-    public Map<String, Double> dividedVolumesRelation() {
-        return dividedVolumesRelation(cube);
     }
 
         public Map<String, Double> dividedVolumesRelation(Cube cube) {
