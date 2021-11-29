@@ -3,7 +3,6 @@ package edu.kosolobov.shapes.entity;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.util.Objects;
 
 public class Point3D {
     private static final Logger log = LogManager.getLogger();
@@ -44,7 +43,12 @@ public class Point3D {
 
     @Override
     public int hashCode() {
-        return Objects.hash(x, y, z);
+        double prime = 4.2;
+        double result = 1.0;
+        result = result * prime + x;
+        result = result * prime + y;
+        result = result * prime + z;
+        return (int) result;
     }
 
     @Override

@@ -12,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CubeFactoryTest {
-    private CubeFactory factory = new CubeFactory();
+    private final CubeFactory factory = new CubeFactory();
 
     @Test
     void getCube() {

@@ -36,18 +36,15 @@ public class FileReader {
             return new ArrayList<>();
         }
 
-
-        Stream<String> stream;
-        try {
-            stream = Files.lines(Paths.get(absolutePath), StandardCharsets.UTF_8);
+        List<String> lines;
+        try (Stream<String> stream = Files.lines(Paths.get(absolutePath), StandardCharsets.UTF_8)){
+            lines = stream.toList();
+            log.log(Level.INFO, "File {} opened.", absolutePath);
         } catch (IOException e) {
             log.log(Level.ERROR, "File {} is invalid: {}", absolutePath, e.toString());
             return new ArrayList<>();
         }
 
-        log.log(Level.INFO, "File {} opened.", absolutePath);
-        List<String> lines = stream.toList();
-        stream.close();
 
         return lines;
     }

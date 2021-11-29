@@ -1,4 +1,4 @@
-package edu.kosolobov.shapes.laboratory;
+package edu.kosolobov.shapes.service;
 
 import edu.kosolobov.shapes.entity.figure.Figure;
 import edu.kosolobov.shapes.entity.Point3D;
@@ -10,10 +10,10 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CubeLaboratory {
-    private static final Logger log = LogManager.getLogger(CubeLaboratory.class);
+public class CubeService {
+    private static final Logger log = LogManager.getLogger(CubeService.class);
 
-    public CubeLaboratory() {
+    public CubeService() {
         super();
     }
 
