@@ -1,8 +1,6 @@
 package edu.kosolobov.shapes.validator;
 
 import edu.kosolobov.shapes.reader.FileReader;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
 

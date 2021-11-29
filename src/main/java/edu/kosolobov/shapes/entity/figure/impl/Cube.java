@@ -75,7 +75,7 @@ public class Cube implements Figure {
 
     @Override
     public int hashCode() {
-        final Double prime = 7.5;
+        final double prime = 7.5;
         double hCode = 1.0;
         hCode = hCode * prime + property.getSideLength();
         hCode = hCode * prime + property.getZeroPoint().getX();
