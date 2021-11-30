@@ -1,7 +1,7 @@
 package edu.kosolobov.shapes.warehouse.impl;
 
-import edu.kosolobov.shapes.warehouse.parameters.CubeParameters;
 import edu.kosolobov.shapes.warehouse.Warehouse;
+import edu.kosolobov.shapes.warehouse.parameters.FigureParameters;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,26 +9,26 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CubeWarehouse implements Warehouse {
-    private static final Logger log = LogManager.getLogger(CubeWarehouse.class);
-    private static final CubeWarehouse instance = new CubeWarehouse();
-    private final Map<Long, CubeParameters> storage = new HashMap<>();
+public class FigureWarehouse implements Warehouse {
+    private static final Logger log = LogManager.getLogger(FigureWarehouse.class);
+    private static final FigureWarehouse instance = new FigureWarehouse();
+    private final Map<Long, FigureParameters> storage = new HashMap<>();
+    private FigureWarehouse() {
+    }
 
-    private CubeWarehouse() {}
-
-    public static CubeWarehouse getInstance() {
+    public static FigureWarehouse getInstance() {
         return instance;
     }
 
     @Override
     public void putParameters(long id, double area, double volume) {
-        CubeParameters parameters = new CubeParameters(area, volume);
+        FigureParameters parameters = new FigureParameters(area, volume);
         storage.put(id, parameters);
         log.log(Level.INFO, "{} added to warehouse", parameters);
     }
 
     @Override
-    public CubeParameters getParameters(long id) {
+    public FigureParameters getParameters(long id) {
         return storage.get(id);
     }
 
@@ -61,6 +61,6 @@ public class CubeWarehouse implements Warehouse {
 
     @Override
     public String toString() {
-        return String.format("CubeWarehouse{size:%d}", size());
+        return String.format("FigureWarehouse{size:%d}", size());
     }
 }

@@ -7,6 +7,8 @@ public interface Figure {
 
     FigureProperty getProperty();
 
+    void setProperty(FigureProperty property);
+
     long getId();
 
     default String info() {

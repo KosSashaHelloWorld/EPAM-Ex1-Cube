@@ -1,17 +1,19 @@
 package edu.kosolobov.shapes.warehouse;
 
+import edu.kosolobov.shapes.warehouse.impl.FigureWarehouse;
+
 public interface Warehouse {
     static Warehouse getInstance() {
-        return null;
+        return FigureWarehouse.getInstance();
     }
 
-    void putParameters(int id, double area, double volume);
+    void putParameters(long id, double area, double volume);
 
-    CubeParameters getParameters(int id);
+    Parameters getParameters(long id);
 
-    void updateParameters(int id, double newArea, double newVolume);
+    void updateParameters(long id, double newArea, double newVolume);
 
-    boolean hasParameters(int id);
+    boolean hasParameters(long id);
 
     int size();
 }

@@ -15,6 +15,10 @@ public class CubeProperty implements FigureProperty {
     private static final Double DEFAULT_LENGTH = 10.0;
     private final Point3D zeroPoint3D;
     private final Double sideLength;
+    public static final String LENGTH = "length";
+    public static final String POINT_COORDINATE_X = "byPlaneYZ";
+    public static final String POINT_COORDINATE_Y = "byPlaneXZ";
+    public static final String POINT_COORDINATE_Z = "byPlaneXY";
 
     public CubeProperty(Double sideLength, Point3D centerPoint3D) {
         this.zeroPoint3D = centerPoint3D;
@@ -22,6 +26,22 @@ public class CubeProperty implements FigureProperty {
             this.sideLength = sideLength;
         } else if (sideLength < 0){
             this.sideLength = -sideLength;
+        } else {
+            log.log(Level.ERROR, "Side length of cube can not be == 0. Set to DEFAULT_LENGTH = {}", DEFAULT_LENGTH);
+            this.sideLength = DEFAULT_LENGTH;
+        }
+    }
+
+    public CubeProperty(Map<String, Double> parameters) {
+        double length = parameters.get(LENGTH);
+        double x = parameters.get(POINT_COORDINATE_X);
+        double y = parameters.get(POINT_COORDINATE_Y);
+        double z = parameters.get(POINT_COORDINATE_Z);
+        zeroPoint3D = new Point3D(x, y, z);
+        if (length > 0) {
+            sideLength = length;
+        } else if (length< 0){
+            sideLength = -length;
         } else {
             log.log(Level.ERROR, "Side length of cube can not be == 0. Set to DEFAULT_LENGTH = {}", DEFAULT_LENGTH);
             this.sideLength = DEFAULT_LENGTH;
@@ -37,10 +57,10 @@ public class CubeProperty implements FigureProperty {
     public Map<String, Double> getParameters() {
         Map<String, Double> parameters = new HashMap<>();
 
-        parameters.put("length", sideLength);
-        parameters.put("PointX", zeroPoint3D.getX());
-        parameters.put("PointY", zeroPoint3D.getY());
-        parameters.put("PointZ", zeroPoint3D.getZ());
+        parameters.put(LENGTH, sideLength);
+        parameters.put(POINT_COORDINATE_X, zeroPoint3D.getX());
+        parameters.put(POINT_COORDINATE_Y, zeroPoint3D.getY());
+        parameters.put(POINT_COORDINATE_Z, zeroPoint3D.getZ());
 
         return parameters;
     }

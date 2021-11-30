@@ -2,7 +2,11 @@ package edu.kosolobov.shapes.entity.figure.impl;
 
 import edu.kosolobov.shapes.entity.Point3D;
 import edu.kosolobov.shapes.entity.figure.Figure;
+import edu.kosolobov.shapes.entity.property.FigureProperty;
 import edu.kosolobov.shapes.entity.property.impl.CubeProperty;
+import edu.kosolobov.shapes.observer.FigureEvent;
+import edu.kosolobov.shapes.observer.FigureObservable;
+import edu.kosolobov.shapes.observer.FigureObserver;
 import edu.kosolobov.shapes.service.FigureService;
 import edu.kosolobov.shapes.service.impl.CubeService;
 import edu.kosolobov.shapes.util.UtilGenerator;
@@ -13,10 +17,11 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cube implements Figure {
+public class Cube implements Figure, FigureObservable {
     private static final Logger log = LogManager.getLogger(Cube.class);
     private final long figureId;
-    private final CubeProperty property;
+    private CubeProperty property;
+    List<FigureObserver> observers = new ArrayList<>();
 
     public Cube(CubeProperty property) {
         figureId = UtilGenerator.generateFigureId();
@@ -50,6 +55,11 @@ public class Cube implements Figure {
 
     public CubeProperty getProperty() {
         return property;
+    }
+
+    @Override
+    public void setProperty(FigureProperty property) {
+        this.property = (CubeProperty) property;
     }
 
     @Override
@@ -94,5 +104,25 @@ public class Cube implements Figure {
     @Override
     public String toString() {
         return info();
+    }
+
+    @Override
+    public void attach(FigureObserver observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void detach(FigureObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (FigureObserver observer : observers) {
+            if (observer != null) {
+                FigureEvent event = new FigureEvent(this);
+                observer.updateParameters(event);
+            }
+        }
     }
 }

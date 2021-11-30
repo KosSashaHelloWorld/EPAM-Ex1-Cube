@@ -1,5 +1,6 @@
 package edu.kosolobov.shapes.repository;
 
+import edu.kosolobov.shapes.comparator.FigureComparator;
 import edu.kosolobov.shapes.entity.figure.Figure;
 import edu.kosolobov.shapes.repository.specification.FigureSpecification;
 import org.apache.logging.log4j.Level;
@@ -56,6 +57,12 @@ public class FigureRepository {
 
     public List<Figure> getFigures() {
         return figures;
+    }
+
+    public List<Figure> sort(FigureComparator comparator) {
+        return figures.stream()
+                .sorted(comparator)
+                .toList();
     }
 
     public List<Figure> query(FigureSpecification specification) {

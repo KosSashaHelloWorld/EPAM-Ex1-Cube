@@ -3,8 +3,8 @@ package edu.kosolobov.shapes.warehouse.impl;
 import edu.kosolobov.shapes.entity.figure.impl.Cube;
 import edu.kosolobov.shapes.factory.CubeFactory;
 import edu.kosolobov.shapes.service.impl.CubeService;
-import edu.kosolobov.shapes.warehouse.CubeParameters;
 import edu.kosolobov.shapes.warehouse.Warehouse;
+import edu.kosolobov.shapes.warehouse.Parameters;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -34,7 +34,7 @@ class CubeWarehouseTest {
 
     @Test
     void getParameters() {
-        CubeParameters parameters = warehouse.getParameters(id);
+        Parameters parameters = warehouse.getParameters(id);
         assertFalse(parameters.isEmpty());
     }
 
@@ -45,7 +45,7 @@ class CubeWarehouseTest {
         double area = service.getArea(cube);
         double volume = service.getVolume(cube);
         warehouse.updateParameters(id, area, volume);
-        CubeParameters parameters = warehouse.getParameters(id);
+        Parameters parameters = warehouse.getParameters(id);
         assertTrue(parameters.getArea() == area && parameters.getVolume() == volume);
     }
 }
