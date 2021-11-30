@@ -24,13 +24,12 @@ class CubeObserverTest {
         long id = cube.getId();
         double area = cube.getService().getArea();
         double volume = cube.getService().getVolume();
-        cw.putParameters(cube.getId(), area, volume);
+        cw.putParameters(id, area, volume);
 
         Map<String, Double> parameters = cube.getProperty().getParameters();
         parameters.replace(LENGTH, 20.0);
         cube.setProperty(new CubeProperty(parameters));
 
-        cube.notifyObservers();
         assertNotEquals(cw.getParameters(id).getArea(), area);
         assertNotEquals(cw.getParameters(id).getVolume(), volume);
     }

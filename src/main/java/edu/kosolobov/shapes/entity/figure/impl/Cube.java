@@ -60,6 +60,7 @@ public class Cube implements Figure, FigureObservable {
     @Override
     public void setProperty(FigureProperty property) {
         this.property = (CubeProperty) property;
+        notifyObservers();
     }
 
     @Override
