@@ -81,13 +81,12 @@ class FigureRepositoryTest {
         Collections.shuffle(cubes);
 
         cubes.forEach(repo::add);
-        repo.getFigures().forEach(System.out::println);
-        repo.sort(FigureComparator.ID).forEach(System.out::println);
-        repo.sort(FigureComparator.X_COORDINATE).forEach(System.out::println);
-        repo.sort(FigureComparator.Y_COORDINATE).forEach(System.out::println);
-        repo.sort(FigureComparator.Z_COORDINATE).forEach(System.out::println);
-        repo.sort(FigureComparator.AREA).forEach(System.out::println);
-        repo.sort(FigureComparator.VOLUME).forEach(System.out::println);
+        repo.sort(FigureComparator.ID);
+        repo.sort(FigureComparator.X_COORDINATE);
+        repo.sort(FigureComparator.Y_COORDINATE);
+        repo.sort(FigureComparator.Z_COORDINATE);
+        repo.sort(FigureComparator.AREA);
+        repo.sort(FigureComparator.VOLUME);
 
         assertFalse(repo.isEmpty());
         repo.clear();
