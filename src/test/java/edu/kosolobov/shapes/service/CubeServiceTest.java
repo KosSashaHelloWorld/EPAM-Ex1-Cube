@@ -3,6 +3,7 @@ package edu.kosolobov.shapes.service;
 import edu.kosolobov.shapes.entity.figure.Figure;
 import edu.kosolobov.shapes.entity.figure.impl.Cube;
 import edu.kosolobov.shapes.factory.CubeFactory;
+import edu.kosolobov.shapes.service.impl.CubeService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -25,12 +26,12 @@ class CubeServiceTest {
 
     @Test
     void calcArea() {
-        assertEquals(600.0, cubeService.calcArea(cube));
+        assertEquals(600.0, cubeService.getArea(cube));
     }
 
     @Test
     void calcVolume() {
-        assertEquals(1000.0, cubeService.calcVolume(cube));
+        assertEquals(1000.0, cubeService.getVolume(cube));
     }
 
     @Test

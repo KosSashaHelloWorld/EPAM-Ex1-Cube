@@ -1,6 +1,7 @@
 package edu.kosolobov.shapes.repository;
 
 import edu.kosolobov.shapes.entity.figure.Figure;
+import edu.kosolobov.shapes.repository.specification.FigureSpecification;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -51,5 +52,15 @@ public class FigureRepository {
 
     public boolean isEmpty() {
         return figures.isEmpty();
+    }
+
+    public List<Figure> getFigures() {
+        return figures;
+    }
+
+    public List<Figure> query(FigureSpecification specification) {
+        return figures.stream()
+                .filter(specification::specify)
+                .toList();
     }
 }

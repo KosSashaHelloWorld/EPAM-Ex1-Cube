@@ -3,6 +3,8 @@ package edu.kosolobov.shapes.entity.figure.impl;
 import edu.kosolobov.shapes.entity.Point3D;
 import edu.kosolobov.shapes.entity.figure.Figure;
 import edu.kosolobov.shapes.entity.property.impl.CubeProperty;
+import edu.kosolobov.shapes.service.FigureService;
+import edu.kosolobov.shapes.service.impl.CubeService;
 import edu.kosolobov.shapes.util.UtilGenerator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -52,7 +54,7 @@ public class Cube implements Figure {
 
     @Override
     public String info() {
-        return String.format("Cube{figureId:%d, sideLength:%.4f, zeroPoint:%s",
+        return String.format("Cube{figureId:%d, sideLength:%.2f, zeroPoint:%s",
                 figureId,
                 property.getSideLength(),
                 property.getZeroPoint());
@@ -63,6 +65,11 @@ public class Cube implements Figure {
         Cube cube = new Cube(new CubeProperty(property.getSideLength(), property.getZeroPoint().copy()));
         log.log(Level.ERROR, "Copying cube failed");
         return cube;
+    }
+
+    @Override
+    public FigureService getService() {
+        return new CubeService(this);
     }
 
     @Override

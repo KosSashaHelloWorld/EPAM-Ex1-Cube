@@ -1,6 +1,7 @@
 package edu.kosolobov.shapes.entity.figure;
 
 import edu.kosolobov.shapes.entity.property.FigureProperty;
+import edu.kosolobov.shapes.service.FigureService;
 
 public interface Figure {
 
@@ -13,4 +14,6 @@ public interface Figure {
     }
 
     Figure copy();
+
+    FigureService getService();
 }

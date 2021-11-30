@@ -53,7 +53,7 @@ public class Point3D {
 
     @Override
     public String toString() {
-        return String.format("Point{X: %.4f, Y: %.4f, Z: %.4f}", x, y, z);
+        return String.format("Point{X: %.2f, Y: %.2f, Z: %.2f}", x, y, z);
     }
 
     public static class PointBuilder {

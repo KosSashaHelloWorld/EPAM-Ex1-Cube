@@ -1,8 +1,9 @@
-package edu.kosolobov.shapes.service;
+package edu.kosolobov.shapes.service.impl;
 
 import edu.kosolobov.shapes.entity.figure.Figure;
 import edu.kosolobov.shapes.entity.Point3D;
 import edu.kosolobov.shapes.entity.figure.impl.Cube;
+import edu.kosolobov.shapes.service.FigureService;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,19 +11,45 @@ import org.apache.logging.log4j.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CubeService {
+public class CubeService implements FigureService {
     private static final Logger log = LogManager.getLogger(CubeService.class);
+    private Cube cube;
 
     public CubeService() {
-        super();
     }
 
-    public Double calcArea(Cube cube) {
-        return (cube.getProperty().getSideLength() * cube.getProperty().getSideLength()) * 6;
+    public CubeService(Cube cube) {
+        this.cube = cube;
     }
 
-    public Double calcVolume(Cube cube) {
-        return cube.getProperty().getSideLength() * cube.getProperty().getSideLength() * cube.getProperty().getSideLength();
+    @Override
+    public Double getArea(Figure figure) {
+        if (isCube(figure)) {
+            cube = (Cube) figure;
+            return (cube.getProperty().getSideLength() * cube.getProperty().getSideLength()) * 6;
+        } else {
+            return 0.0;
+        }
+    }
+
+    @Override
+    public Double getVolume(Figure figure) {
+        if (isCube(figure)) {
+            cube = (Cube) figure;
+            return cube.getProperty().getSideLength() * cube.getProperty().getSideLength() * cube.getProperty().getSideLength();
+        } else {
+            return 0.0;
+        }
+    }
+
+    @Override
+    public Double getArea() {
+        return getArea(cube);
+    }
+
+    @Override
+    public Double getVolume() {
+        return getVolume(cube);
     }
 
     public boolean isOnCoordinatePlane(Cube cube) {
